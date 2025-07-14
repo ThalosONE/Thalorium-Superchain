@@ -1,0 +1,41 @@
+{
+  "chain_id": "thalorium-superchain",
+  "genesis_time": "2025-07-14T00:00:00Z",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1"
+    }
+  },
+  "validators": [],
+  "app_state": {
+    "staking": {
+      "params": {
+        "bond_denom": "THAL",
+        "unbonding_time": "1814400s"
+      },
+      "validators": [],
+      "delegations": []
+    },
+    "bank": {
+      "balances": [
+        {
+          "address": "thal1genesis00000000000000000000000000000000",
+          "coins": [
+            {
+              "denom": "THAL",
+              "amount": "36000000"
+            }
+          ]
+        }
+      ],
+      "supply": [
+        {
+          "denom": "THAL",
+          "amount": "36000000"
+        }
+      ]
+    }
+  }
+}
