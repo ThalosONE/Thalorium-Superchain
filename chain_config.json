@@ -1,0 +1,24 @@
+{
+  "network": "thalorium-mainnet",
+  "token": {
+    "symbol": "THAL",
+    "max_supply": "36000000",
+    "decimals": 8,
+    "burn_on_tx": true,
+    "staking_enabled": true
+  },
+  "modules": {
+    "poseidon_ai": true,
+    "depins": true,
+    "quantum_hooks": true,
+    "zk_snarks": true,
+    "iso_20022": true,
+    "rwa_oracles": true,
+    "nft_asset_forge": true
+  },
+  "governance": {
+    "type": "AI-Sovereign",
+    "voting_period_days": 7,
+    "quorum_percent": 66
+  }
+}
