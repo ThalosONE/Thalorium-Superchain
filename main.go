@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 )
 
@@ -243,4 +244,18 @@ func InitDappEngine() {
 
 func InitVoiceInterface() {
 	fmt.Println("🎙️ AI voice command interface activated")
+	// Start Public HTTP Server
+go func() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "🌐 Thalorium Superchain is LIVE – All Systems Online.")
+	})
+	port := "8080"
+	fmt.Println("🌍 Public HTTP server started on port", port)
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
+		fmt.Println("❌ HTTP server error:", err)
+	}
+}()
+
+// Block main thread to keep the app running
+select {}
 }
